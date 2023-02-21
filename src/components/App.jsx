@@ -1,10 +1,12 @@
 import Profile from './Profile/Profile';
 import Statistics from './Statistics/Statistics'
 import FriendList from './Friends/Friends';
+import TransactionHistory from './Transactions/Transactions';
 
 import user from '../userData/user.json'
 import data from '../statisticsData/data.json'
 import friends from '../friendsData/friends.json'
+import transactions from '../transactionsData/transactions.json'
 // console.log(statistics);
 
 
@@ -33,6 +35,8 @@ export const App = () => {
       <Statistics title="Upload stats" stats={data} />
 
       <FriendList friends={friends} />
+
+      <TransactionHistory items={transactions} />
     </div>
   );
 };
