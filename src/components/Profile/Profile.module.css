@@ -1,6 +1,40 @@
 .profile {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 700px;
   height: auto;
+  background-color: beige;
+  padding: 30px;
+  border-radius: 20px;
+}
+.avatar {
+  border-radius: 50%;
+  background-color: white;
+}
+.description {
+  display: flex;
+  flex-direction: column;
+}
+.avatar,
+.name,
+.tag,
+.location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.stats {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  justify-content: space-around;
+}
+.item {
+  display: flex;
+  flex-direction: column;
+}
+.label {
+  margin-bottom: 20px;
 }

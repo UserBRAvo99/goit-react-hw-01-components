@@ -4,7 +4,7 @@ import css from '../Profile/Profile.module.css'
 function Profile(prop) {
     // console.log(prop);
 
-    const { username, tag, location, avatar, stats } = prop.user
+    const { username, tag, location, avatar, stats } = prop
     // console.log(username, tag, location, avatar, stats);
 
     return (<div className={css.profile}>
@@ -12,24 +12,24 @@ function Profile(prop) {
     <img
       src={avatar}
       alt="User avatar"
-      className="avatar"
+      className={css.avatar}
     />
-    <p className="name">{username}</p>
-    <p className="tag">@{tag}</p>
-    <p className="location">{location}</p>
+            <p className={css.name}>{username}</p>
+    <p className={css.tag}>@{tag}</p>
+            <p className={css.location}>{location}</p>
   </div>
 
-  <ul className="stats">
-    <li>
-      <span className="label">Followers</span>
+  <ul className={css.stats}>
+    <li className={css.item}>
+      <span className={css.label}>Followers</span>
       <span className="quantity">{stats.followers}</span>
     </li>
-    <li>
-      <span className="label">Views</span>
+    <li className={css.item}>
+      <span className={css.label}>Views</span>
       <span className="quantity">{stats.followers}</span>
     </li>
-    <li>
-      <span className="label">Likes</span>
+    <li className={css.item}>
+      <span className={css.label}>Likes</span>
       <span className="quantity">{stats.followers}</span>
     </li>
   </ul>
@@ -44,8 +44,8 @@ Profile.propTypes = {
     tag: PropTypes.string.isRequired,
     location: PropTypes.string.isRequired,
     stats: PropTypes.shape({
-    followers: PropTypes.number.isRequired,
-    views: PropTypes.number.isRequired,
-    likes: PropTypes.number.isRequired,
+        followers: PropTypes.number.isRequired,
+        views: PropTypes.number.isRequired,
+        likes: PropTypes.number.isRequired,
   })
 }
