@@ -1,0 +1,29 @@
+.transactionHistory {
+  width: 1400px;
+  box-shadow: 10px 5px 5px grey;
+  margin-bottom: 200px;
+}
+
+.th {
+  width: 30%;
+  padding: 40px 0;
+  background-color: skyblue;
+  color: white;
+  text-transform: uppercase;
+  font-size: 40px;
+  font-weight: 400;
+}
+.trWhite,
+.trGrey {
+  text-transform: capitalize;
+}
+.trGrey {
+  background-color: rgba($color: #8ed1de, $alpha: 0.2);
+}
+.trWhite {
+  background-color: white;
+}
+.td {
+  padding: 40px 0;
+  text-align: center;
+}
