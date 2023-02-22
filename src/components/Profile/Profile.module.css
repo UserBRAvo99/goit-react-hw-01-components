@@ -4,16 +4,25 @@
   width: 700px;
   height: auto;
   background-color: beige;
-  padding: 30px;
+  padding-top: 30px;
   border-radius: 20px;
+  margin-bottom: 100px;
 }
 .avatar {
   border-radius: 50%;
   background-color: white;
+  margin-bottom: 30px;
 }
 .description {
   display: flex;
   flex-direction: column;
+  border-bottom: solid 1px grey;
+  padding-bottom: 40px;
+}
+.name,
+.tag,
+.location {
+  margin: 10px;
 }
 .avatar,
 .name,
@@ -25,6 +34,15 @@
   margin-left: auto;
   margin-right: auto;
 }
+.name {
+  font-size: 60px;
+  font-weight: 700;
+}
+.tag,
+.location {
+  color: grey;
+}
+
 .stats {
   display: flex;
   list-style: none;
@@ -37,4 +55,7 @@
 }
 .label {
   margin-bottom: 20px;
+}
+.quantity {
+  font-weight: 900;
 }

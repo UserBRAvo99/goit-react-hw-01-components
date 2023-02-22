@@ -1,0 +1,33 @@
+.statistics {
+  display: flex;
+  width: 800px;
+  background-color: azure;
+  flex-direction: column;
+  border: solid 1px grey;
+  box-shadow: 10px 5px 5px grey;
+  margin-bottom: 100px;
+}
+.title {
+  margin: 90px auto;
+  text-transform: uppercase;
+}
+.statList {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+.item {
+  display: flex;
+  flex-direction: column;
+  width: calc(100% / 5);
+  align-items: center;
+  padding: 20px 0;
+}
+.label {
+  margin-bottom: 30px;
+}
+.label,
+.interest {
+  color: white;
+}

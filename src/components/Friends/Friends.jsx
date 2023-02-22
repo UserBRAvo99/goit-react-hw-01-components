@@ -1,16 +1,16 @@
 import PropTypes from 'prop-types'
 
-function FriendList(friends) {
-    console.log(friends);
-    // friends.friends.map(friend => console.log(friend))
+import style from './Friends.module.scss'
+
+function FriendList({friends}) {
     return (
-        <ul className="friendList">
-            {friends.friends.map(({ id, avatar, name }) => {
+        <ul className={style.friendList} >
+            {friends.map(({ id, avatar, name,isOnline}) => {
                 return (
-                    <li className="item" key={id}>
-                        <span className="status"></span>
-                        <img className="avatar" src={avatar} alt="User avatar" width="48" />
-                        <p className="name">{name}</p>
+                    <li className={style.item} key={id}>
+                        <span className={isOnline ? style.isOnline : style.isOffline} ></span>
+                        <img className={style.img} src={avatar} alt="User avatar" />
+                        <p className={style.nameFriend} >{name}</p>
                     </li>
                 )
             })}
@@ -19,10 +19,15 @@ function FriendList(friends) {
     
 }
 
+
+
+FriendList.propTypes = {
+    friends: PropTypes.arrayOf(PropTypes.shape({
+        id: PropTypes.number.isRequired,
+        avatar: PropTypes.string.isRequired,
+        name: PropTypes.string.isRequired,
+        isOnline: PropTypes.bool.isRequired
+}))
+}
+
 export default FriendList
-
-// FriendList.propTypes = {
-
-// }
-
-// avatar: 'https://cdn-icons-png.flaticon.com/512/1998/1998592.png', name: 'Mango', isOnline: true, id: 1812

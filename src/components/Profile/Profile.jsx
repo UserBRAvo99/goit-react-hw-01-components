@@ -8,7 +8,7 @@ function Profile(prop) {
     // console.log(username, tag, location, avatar, stats);
 
     return (<div className={css.profile}>
-  <div className="description">
+        <div className={css.description}>
     <img
       src={avatar}
       alt="User avatar"
@@ -22,21 +22,20 @@ function Profile(prop) {
   <ul className={css.stats}>
     <li className={css.item}>
       <span className={css.label}>Followers</span>
-      <span className="quantity">{stats.followers}</span>
+      <span className={css.quantity}>{stats.followers}</span>
     </li>
     <li className={css.item}>
       <span className={css.label}>Views</span>
-      <span className="quantity">{stats.followers}</span>
+      <span className={css.quantity}>{stats.views}</span>
     </li>
     <li className={css.item}>
       <span className={css.label}>Likes</span>
-      <span className="quantity">{stats.followers}</span>
+      <span className={css.quantity}>{stats.likes}</span>
     </li>
   </ul>
 </div>)
 }
 
-export default Profile
 
 Profile.propTypes = {
     username: PropTypes.string.isRequired,
@@ -49,3 +48,5 @@ Profile.propTypes = {
         likes: PropTypes.number.isRequired,
   })
 }
+
+export default Profile

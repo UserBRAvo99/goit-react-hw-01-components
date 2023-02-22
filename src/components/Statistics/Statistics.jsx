@@ -1,18 +1,17 @@
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
+
+import style from './Statistics.module.scss'
 
 function Statistics(items) {
-    // console.log(items);
     const {title, stats} = items
     return (
-        <section className="statistics">
-            <h2 className="title">{title}</h2>
-  <ul className="stat-list">
+        <section className={style.statistics}>
+            <h2 className={style.title}>{title}</h2>
+  <ul className={style.statList}>
                 {stats.map(({ id, label, percentage }) => {
-                    // console.log(id, label, percentage);
-                    // const { id, label, percentage } = item
-            return (<li className="item" key={id}>
-                    <span className="label">{label}</span>
-                    <span className="percentage">{percentage}</span>
+            return (<li className={style.item} key={id} style={{backgroundColor: randomColor()}}>
+                    <span className={style.label} >{label}</span>
+                    <span className={style.interest} >{percentage}</span>
                 </li>)
         })}
   </ul>
@@ -20,7 +19,7 @@ function Statistics(items) {
     )
 }
 
-export default Statistics
+
 
 
 Statistics.propTypes = {
@@ -30,4 +29,10 @@ Statistics.propTypes = {
         label: PropTypes.string.isRequired,
         percentage: PropTypes.number.isRequired
 }))
+}
+
+export default Statistics
+
+export function randomColor() {
+  return '#' + Math.floor(Math.random() * 16777215).toString(16);
 }
